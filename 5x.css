@@ -1,0 +1,178 @@
+header{
+  border-bottom: 1px solid black;
+  box-shadow: 0 5px 5px rgb(145, 143, 143);
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo-area{
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #d90845;
+}
+.header .logo-area h1{
+  font-size: 16px;
+  white-space: nowrap;
+}
+.header nav{
+  line-height: 70px;
+}
+.header nav ul{
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+.header nav ul li{
+  white-space: nowrap;
+  list-style: none;
+  margin: 0 10px;
+} 
+.header nav ul li:hover a{
+  color: #d90845;
+}
+.header nav ul li .far{
+  margin-right: 5px;
+}
+.header nav ul li a{
+  color: #777777;
+  text-decoration: none;
+} 
+section:nth-child(odd){
+  background-color: #f7f7f7;
+}
+.recommand h2:after,
+.hot-lesson h2:after,
+.about h2:after{
+  content:"";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 25px auto;
+  background-color: #d90845;
+}
+.about .row .col-12{
+  text-align: center;
+}
+.about .row .col-12 img{
+  margin-bottom: 15px;
+}
+
+
+/* .hot-lesson .col-12 + .col-12{
+  margin-top: 50px;
+} */
+.hot-lesson .col-12 .item{
+  border: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* padding: 0; */
+  /* margin: 0 10px; */
+}
+.hot-lesson .col-12 .item span{ 
+  display: inline-block;
+  color: #666666;
+}
+.hot-lesson .col-12 .item> span{
+  background-color: #d90845;
+  width: 27%;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  padding: 2px 0; 
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.hot-lesson .col-12 h3{
+  flex-grow: 1;
+  font-size:  20px;
+  padding: 10px 15px;
+  color: #666666;
+}
+.hot-lesson .col-12 .item .lesson-info{
+  padding: 15px;
+}
+.hot-lesson .item .lesson-info h4{
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666666;
+}
+.hot-lesson .item .lesson-info >span:last-child{
+  background-color: #e6e6e6;
+  color: #666666;
+  letter-spacing: 2px;
+  padding: 0 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+.hot-lesson .more-lesson h3{
+  color: white;
+  font-size: 20px;
+  padding: 20px 0;
+  width: 300px;
+  border-radius: 5px;
+  background-color: #d90845;
+  margin: auto;
+}
+.recommand .col-3 img{
+  border-radius: 50%;
+}
+
+.know-more p{
+  font-size: 18px;
+  line-height: 2;
+}
+.know-more .social-link .fab{
+  margin: 20px 25px;
+  font-size: 60px;
+  color: #d90845;
+}
+footer{
+  background-color: #f7f7f7;
+}
+footer li{
+  list-style: none;
+}
+footer li:hover a{
+  color: #d90845;
+  text-decoration: none;
+}
+footer a{
+  color: #777777;
+  font-size: 14px;
+}
+footer .nav-group{
+  padding-bottom: 50px;
+}
+footer .contact ul{
+  padding: 0;
+  margin-top: 20px;
+}
+footer .contact ul li+li{
+  margin-top: 10px;
+}
+footer .contact li .fas{
+  margin-right: 10px;
+  color: #777777;
+}
+footer .footer-nav ul:last-child .fab{
+  color: #777777;
+  margin-right: 10px;
+}
+footer h4{
+  font-size: 16px;
+  color: black;
+}
+
+footer .copy-right{
+  border-top: 1px solid #777777;
+  /* padding: 30px 0; */
+}
+footer .copy-right h5{
+  padding-top: 20px;
+  font-size: 14px;
+}
