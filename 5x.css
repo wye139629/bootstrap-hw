@@ -1,10 +1,16 @@
 header{
   border-bottom: 1px solid black;
   box-shadow: 0 5px 5px rgb(145, 143, 143);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  top: 0;
 }
 .header{
   display: flex;
   justify-content: space-between;
+  height: 70px;
 }
 .header .logo-area{
   font-size: 16px;
@@ -16,6 +22,62 @@ header{
   font-size: 16px;
   white-space: nowrap;
 }
+.header label{
+  width: 75px;
+  height: 100%;
+  background-color: #d90845;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  display: none;
+}
+.header label::after{
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 10px 0 white,
+              0 -10px 0 white;;
+}
+.header input{
+  display: none;
+  opacity: 0;
+}
+@media screen and (max-width: 992px) {
+  .header{
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .header nav{
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    display: none;
+  }
+  .header nav ul{
+    flex-direction: column;
+  }
+  .header label{
+    display: block;
+  }
+  .header input:checked ~ nav{
+   display: block;
+  }
+}
+
+
+
+
+
 .header nav{
   line-height: 70px;
 }
@@ -39,6 +101,9 @@ header{
   color: #777777;
   text-decoration: none;
 } 
+.banner{
+  margin-top: 70px;
+}
 section:nth-child(odd){
   background-color: #f7f7f7;
 }
