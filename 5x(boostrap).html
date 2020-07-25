@@ -54,10 +54,10 @@
         </div>
 
         <div class="button-group">
-          <span class="dot"><span class="inner-dot"></span></span>
-          <span class="dot"><span class="inner-dot"></span></span>
-          <span class="dot"><span class="inner-dot"></span></span>
-          <span class="dot"><span class="inner-dot"></span></span>
+          <span class="dot"><span class="inner-dot" onclick="currentslide(1)"></span></span>
+          <span class="dot"><span class="inner-dot" onclick="currentslide(2)"></span></span>
+          <span class="dot"><span class="inner-dot" onclick="currentslide(3)"></span></span>
+          <span class="dot"><span class="inner-dot" onclick="currentslide(4)"></span></span>
         </div>
       </section>
 
@@ -257,7 +257,23 @@
 
     <!-- Optional JavaScript -->
     <script>
-      var index = 0;
+       function currentslide(n) {
+         clickslides(n);
+       }
+
+       function clickslides(n) {
+        var i;
+        const slides = Array.from(document.querySelectorAll(`.banner .slides`))
+        const dots = Array.from(document.querySelectorAll(`.banner .button-group .dot .inner-dot`))
+        // console.log(slides)
+        for(i=0;i<slides.length;i++){
+          slides[i].style.display = 'none';
+          dots[i].style.opacity= '0';
+        }
+        slides[n-1].style.display="block";
+        dots[n-1].style.opacity="1";
+       }
+       var index = 1;
       function showslides() {
         var i;
         const slides = Array.from(document.querySelectorAll(`.banner .slides`))
@@ -265,15 +281,14 @@
         // console.log(slides)
         for(i=0;i<slides.length;i++){
           slides[i].style.display = 'none';
-          dots[i].style.display = 'none';
+          dots[i].style.opacity= '0';
         }
         index++;
-        if (index>slides.length){
+        if (index > slides.length){
           index=1;
         }
         slides[index-1].style.display="block";
-        dots[index-1].style.display="block";
-        
+        dots[index-1].style.opacity="1";
       }
 
       setInterval(showslides,5000);
