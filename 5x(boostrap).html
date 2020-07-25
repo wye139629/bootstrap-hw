@@ -22,10 +22,10 @@
           <input type="checkbox" id='checked'>
           <label for="checked" ></label>
           <nav>
-            <ul >
+            <ul>
               <li ><i class="far fa-gem"></i><a href="#" >線上課程</a></li>
-              <li > <i class="far fa-compass"></i><a href="#" >ASTRO Camp</a></li>
-              <li ><a href="#" >全方位課程</a></li>
+              <li ><i class="far fa-compass"></i><a href="#" >ASTRO Camp</a></li>
+              <li ><i class="fas fa-bolt"></i><a href="#">全方位課程</a></li>
               <li ><a href="#" >短期課程</a></li>
               <li ><a href="#" >專案開發</a></li>
               <li ><a href="#" >專欄文章</a></li>
@@ -37,8 +37,27 @@
 
       <!-- ============================================ -->
       <section class="banner">
-        <div class="container-fluid px-0">
+        <div class="slides container-fluid px-0">
           <img src="./pic_icon/banner_astro-a839be5c.jpg" alt="" class="w-100">
+        </div>
+
+        <div class="slides container-fluid px-0">
+          <img src="./pic_icon/banner_astro-2.jpg" alt="" class="w-100">
+        </div>
+
+        <div class="slides container-fluid px-0">
+          <img src="./pic_icon/banner_mokumokukai-3.jpg" alt="" class="w-100">
+        </div>
+
+        <div class=" slides container-fluid px-0">
+          <img src="./pic_icon/ˋ4banner_5xruby-.jpg" alt="" class="w-100">
+        </div>
+
+        <div class="button-group">
+          <span class="dot"><span class="inner-dot"></span></span>
+          <span class="dot"><span class="inner-dot"></span></span>
+          <span class="dot"><span class="inner-dot"></span></span>
+          <span class="dot"><span class="inner-dot"></span></span>
         </div>
       </section>
 
@@ -237,6 +256,28 @@
 
 
     <!-- Optional JavaScript -->
+    <script>
+      var index = 0;
+      function showslides() {
+        var i;
+        const slides = Array.from(document.querySelectorAll(`.banner .slides`))
+        const dots = Array.from(document.querySelectorAll(`.banner .button-group .dot .inner-dot`))
+        // console.log(slides)
+        for(i=0;i<slides.length;i++){
+          slides[i].style.display = 'none';
+          dots[i].style.display = 'none';
+        }
+        index++;
+        if (index>slides.length){
+          index=1;
+        }
+        slides[index-1].style.display="block";
+        dots[index-1].style.display="block";
+        
+      }
+
+      setInterval(showslides,5000);
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
